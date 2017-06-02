@@ -1,0 +1,37 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			Multiple slides
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	<ks-swiper-container [options]="options">
+		<ks-swiper-slide *ngFor="let slide of items_a">
+			<ion-card class="list-card">
+				<div class="cardInnerWrap">
+					<ion-item>
+						{{ slide.gameTitle }}
+					</ion-item>
+					<img src="{{ slide.gameImage }}">
+				</div>
+			</ion-card>
+		</ks-swiper-slide>
+	</ks-swiper-container>
+
+	<ks-swiper-container [options]="options">
+		<ks-swiper-slide *ngFor="let slide of items_b">
+			<ion-card class="list-card">
+				<div class="cardInnerWrap">
+					<ion-item>
+						{{ slide.gameTitle }}
+					</ion-item>
+					<img src="{{ slide.gameImage }}">
+				</div>
+			</ion-card>
+		</ks-swiper-slide>
+	</ks-swiper-container>
+
+</ion-content>
